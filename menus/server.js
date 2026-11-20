@@ -26,7 +26,7 @@ import db from './config/db.js';
 
 import bodyParser from 'body-parser';
 app.use(bodyParser.json());
-
+const PORT = process.env.PORT || 3000
 
 
 app.get('/', (req, res) => {
@@ -37,6 +37,6 @@ import menuRouter from './router/menuRouter.js';
 app.use('/menus', menuRouter);
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('Server is running on localhost')
 });
